@@ -59,12 +59,37 @@ int write_ppm_color_bitmap(char *filename, PPM_Image_Buffer *buf)
 
 void filter_color_component(PPM_Image_Buffer* buf, unsigned int rgb_mask)
 {
-    int size = buf->row*buf->col;
-    for(int i=0;i < size ; i++)
+    int size = buf->row * buf->col;
+    for (int i = 0; i < size; i++)
     {
-        if((rgb_mask & (1 << 0)) == 0) ((buf->data) + i)->red = 0;
-        if((rgb_mask & (1 << 1)) == 0) ((buf->data) + i)->green = 0;
-        if((rgb_mask & (1 << 2)) == 0) ((buf->data) + i)->blue = 0;
+        switch (rgb_mask)
+        {
+            case 1:
+                ((buf->data) + i)->green = 0;
+                ((buf->data) + i)->blue = 0;
+                break;
+            case 2:
+                ((buf->data) + i)->red = 0;
+                ((buf->data) + i)->blue = 0;
+                break;
+            case 3:
+                ((buf->data) + i)->red = 0;
+                ((buf->data) + i)->green = 0;
+                break;
+            case 4:
+                ((buf->data) + i)->blue = 0;
+                break;
+            case 5:
+                ((buf->data) + i)->green = 0;
+                break;
+            case 6:
+                ((buf->data) + i)->red = 0;
+                break;
+            default:
+                ((buf->data) + i)->red = 0;
+                ((buf->data) + i)->green = 0;
+                ((buf->data) + i)->blue = 0;
+        }
     }
 }
 
