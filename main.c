@@ -45,7 +45,7 @@ int main(int argc, char *argv[])
                 if ((color_components[0] == 'r' && color_components[1] == 'g') ||
                     (color_components[0] == 'g' && color_components[1] == 'r')) 
                 {
-                    filter_color_component(bufer, 3);
+                    filter_color_component(bufer, 4);
                 }
                 else if ((color_components[0] == 'r' && color_components[1] == 'b') ||
                          (color_components[0] == 'b' && color_components[1] == 'r')) 
