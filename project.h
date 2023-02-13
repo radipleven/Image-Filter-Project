@@ -20,4 +20,3 @@ int read_ppm_color_bitmap(const char *filename, PPM_Image_Buffer *buf);
 int write_ppm_color_bitmap(char *filename, PPM_Image_Buffer *buf);
 void filter_color_component(PPM_Image_Buffer* buf, unsigned int rgb_mask);
 void convert_to_grayscale(PPM_Image_Buffer* buf);
-void convert_to_grayscale(PPM_Image_Buffer* buf);
