@@ -25,7 +25,7 @@ The compiled binary can be used by providing the input and output file names as 
 * ```input_file``` is the path to the input PPM format image file.
 * ```output_file``` is the path to the output PPM format image file.
 * ```-g``` is an optional argument that can be used to convert the image to grayscale.
-* ```-f``` is an optional argument that can be used to filter the color components. The value of this argument can be ```r``` for red, ```g``` for green &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and ```b``` for blue. Multiple color components can be filtered by providing the combination of ```r``` and ```g``` or ```g``` and ```b``` or ```r``` and ```b```.
+* ```-f``` is an optional argument that can be used to filter the color components. The value of this argument can be ```r``` for red, ```g``` for green and ```b``` for blue. Multiple color components can be filtered by providing the combination of ```r``` and ```g``` or ```g``` and ```b``` or ```r``` and ```b```.
 
 ## Cleaning up
 
